@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Providers;
+//this was added becos of passport
+use Laravel\Passport\Passport;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -26,5 +28,7 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         //
+         //this was added bcos of laravle
+        Passport::routes();
     }
 }
